@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://cloud.infini-ai.com/fundamentals/tenant/iam-credentials-api-key.html
+docs: https://cloud.infini-ai.com/fundamentals/tenant/iam-credentials-api-key.html
+provider: Infini-AI (无问芯穹) GenStudio
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: [header]
+  notes: >-
+    The GenStudio large-model service (MaaS) is OpenAI-compatible and authenticates
+    with a tenant-managed API Key passed as a Bearer token in the Authorization
+    header. Confirmed by live probe of the /maas/v1 endpoints (missing/invalid
+    tokens return the provider error envelope).
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  in: header
+  header: Authorization
+  format: 'Bearer <API_KEY>'
+  sources: [live-probe https://cloud.infini-ai.com/maas/v1]
+  evidence:
+  - 'POST /maas/v1/chat/completions with no token -> 401 {"code":60000,"msg":"Wrong Bearer Token or Token is nil"}'
+  - 'POST /maas/v1/chat/completions with bad token -> {"code":10009,"msg":"请使用正确的api key进行请求"}'
