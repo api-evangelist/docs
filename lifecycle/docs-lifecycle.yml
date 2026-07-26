@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://cloud.infini-ai.com/gen-studio/api/get-started/overview.html
+provider: Infini-AI (无问芯穹) GenStudio
+versioning:
+  scheme: uri-path
+  current: v1
+  path_prefix: /maas/v1
+  docs: https://cloud.infini-ai.com/gen-studio/api/reference/maas.html
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+status_page: null
+notes: >-
+  No dedicated status page or published deprecation policy was discoverable on
+  the JS-rendered docs. Rate-limit and billing/usage policies are documented
+  under gen-studio/api/usage-and-billing/. StatusPage and Deprecation pointers
+  are intentionally NOT emitted (no verified page).

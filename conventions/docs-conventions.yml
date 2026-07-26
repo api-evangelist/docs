@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://cloud.infini-ai.com/gen-studio/api/get-started/overview.html
+provider: Infini-AI (无问芯穹) GenStudio MaaS
+summary: >-
+  Cross-cutting request/response semantics for the GenStudio large-model service.
+  The API is OpenAI-compatible, so most conventions follow the OpenAI Chat
+  Completions contract; provider-specific details (base URL, auth, error
+  envelope, rate limits) captured from live probes and the docs.
+base_url: https://cloud.infini-ai.com/maas/v1
+openai_compatible: true
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer <API_KEY>'
+  ref: authentication/docs-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  path_prefix: /maas/v1
+content_type: application/json
+streaming:
+  supported: true
+  style: 'server-sent-events (OpenAI-compatible "stream": true)'
+pagination:
+  documented: false
+  notes: Model-inference endpoints are non-paginated (OpenAI-style single-response / SSE stream).
+idempotency:
+  supported: false
+  notes: No idempotency-key header is documented for the MaaS endpoints.
+error_envelope:
+  shape: '{"code": <int>, "msg": <string>}'
+  ref: errors/docs-problem-types.yml
+rate_limiting:
+  documented: true
+  docs: https://cloud.infini-ai.com/gen-studio/api/usage-and-billing/rate-limit.html
+cross_links:
+  authentication: authentication/docs-authentication.yml
+  errors: errors/docs-problem-types.yml
+  lifecycle: lifecycle/docs-lifecycle.yml

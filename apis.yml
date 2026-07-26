@@ -1,8 +1,31 @@
 aid: docs
-name: docs
-description: docs is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Infini-AI (无问芯穹)
+description: >-
+  Infini-AI (无问芯穹 / Infinigence AI) is a Chinese AGI compute and model-service
+  platform, backed by Qiming, that helps teams optimize model development,
+  fine-tuning, and inference across heterogeneous compute. Its GenStudio
+  large-model service (MaaS) exposes an OpenAI-compatible REST API over a broad
+  catalog of open- and closed-source models (LLM chat/completions plus image and
+  video generation), with LoRA/SFT fine-tuning and multi-LoRA deployment. The
+  platform also offers a fully managed ComfyUI workflow-hosting service (with a
+  WebSocket API) and an Agent Service Platform for building and deploying agent
+  applications and skills. Developers authenticate with a tenant-managed API Key
+  sent as a Bearer token; tenant/IAM, usage analytics, rate limits, billing, and
+  error-code references are documented at docs.infini-ai.com and the cloud console.
 url: https://raw.githubusercontent.com/api-evangelist/docs/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://content.cloud.infini-ai.com/platform-web-prod/logo_small.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,15 +34,75 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Machine Learning
+- Large Language Models
+- Model as a Service
+- Inference
+- ComfyUI
+- Agents
+- AGI Compute
+- OpenAI-Compatible
+apis:
+- name: Infini-AI GenStudio Large-Model Service (MaaS)
+  description: >-
+    OpenAI-compatible model-inference API over Infini-AI's catalog of open- and
+    closed-source models. Bearer (API Key) authentication; chat/completions,
+    models, embeddings and image/video generation endpoints under /maas/v1.
+  humanURL: https://cloud.infini-ai.com/gen-studio/api/reference/maas.html
+  baseURL: https://cloud.infini-ai.com/maas/v1
+  tags:
+  - Large Language Models
+  - Inference
+  - OpenAI-Compatible
+  properties:
+  - type: Documentation
+    url: https://cloud.infini-ai.com/gen-studio/
+  - type: APIReference
+    url: https://cloud.infini-ai.com/gen-studio/api/reference/maas.html
+  - type: GettingStarted
+    url: https://cloud.infini-ai.com/gen-studio/api/get-started/overview.html
+  - type: Authentication
+    url: authentication/docs-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://cloud.infini-ai.com
+- type: Documentation
+  url: https://docs.infini-ai.com
+- type: APIReference
+  url: https://cloud.infini-ai.com/gen-studio/api/reference/maas.html
+- type: GettingStarted
+  url: https://cloud.infini-ai.com/gen-studio/api/get-started/overview.html
+- type: Pricing
+  url: https://cloud.infini-ai.com/gen-studio/api/usage-and-billing/billing.html
+- type: SignUp
+  url: https://cloud.infini-ai.com
+- type: Authentication
+  url: authentication/docs-authentication.yml
+- type: ErrorCatalog
+  url: errors/docs-problem-types.yml
+- type: Conventions
+  url: conventions/docs-conventions.yml
+- type: Lifecycle
+  url: lifecycle/docs-lifecycle.yml
+- type: Conformance
+  url: conformance/docs-conformance.yml
+- type: LLMsTxt
+  url: llms/docs-llms.txt
+- type: DomainSecurity
+  url: security/docs-domain-security.yml
 - type: Website
   url: https://docs.infini-ai.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

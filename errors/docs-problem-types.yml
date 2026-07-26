@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://cloud.infini-ai.com/gen-studio/api/usage-and-billing/error-codes-llm.html
+docs: https://cloud.infini-ai.com/gen-studio/api/usage-and-billing/error-codes-llm.html
+format: custom-json
+envelope:
+  description: >-
+    The GenStudio MaaS API returns errors as a flat JSON object with a numeric
+    business code and a human-readable message. It is NOT RFC 9457 problem+json.
+  fields:
+    code: integer   # provider-specific business error code
+    msg: string     # human-readable message (Chinese or English)
+  example: '{"code":60000,"msg":"Wrong Bearer Token or Token is nil"}'
+problems:
+# Only codes observed via live probe are recorded verbatim; the full registry is
+# published (JS-rendered) at the docs error-codes reference linked above.
+- code: 60000
+  http_status: 401
+  msg: Wrong Bearer Token or Token is nil
+  cause: Authorization header missing or empty
+  remediation: "Send a valid API Key as 'Authorization: Bearer <API_KEY>'"
+  observed: live-probe
+- code: 10009
+  msg: 请使用正确的api key进行请求 (please use a correct api key)
+  cause: Invalid / unrecognized API Key
+  remediation: Use an API Key issued for your tenant in the console
+  observed: live-probe
+notes: >-
+  There are two documented error-code families: LLM API error codes and
+  image/video generation error codes (see docs). ComfyUI has its own error-code
+  reference. Only the two auth-family codes above were verifiable without an
+  authenticated key; the remaining registry was not fabricated.

@@ -1,0 +1,17 @@
+# 文档中心
+
+> This documentation site covers the active brand's platform services, AI compute products, and model service capabilities. Start from the homepage and product entry pages, then follow product-specific guides, API references, and billing or FAQ material as needed.
+
+## Start Here
+
+- [文档中心](https://docs.infini-ai.com/)
+- [什么是大模型服务平台？](https://docs.infini-ai.com/gen-studio/)
+- [什么是智能体服务平台？](https://docs.infini-ai.com/agent-service-platform/)
+- [租户与用户账号](https://docs.infini-ai.com/fundamentals/tenant/)
+
+## Core Modules
+
+- [租户管理](https://docs.infini-ai.com/fundamentals/tenant/): 管理用户账号、权限、API Key、SSH 公钥等。
+- [大模型服务](https://docs.infini-ai.com/gen-studio/): 预置多种开源/闭源模型，简单易用的 API 便于快速集成
+- [ComfyUI 工作流托管](https://docs.infini-ai.com/comfy-stack/): 云端全托管服务，通过 API 调用高效运行生图工作流，优化算力资源与推理效率
+- [智能体服务平台](https://docs.infini-ai.com/agent-service-platform/): 托管 Agent 应用与技能的产品，支持 API 接入与控制
