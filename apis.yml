@@ -51,7 +51,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Machine-Learning
-- Large Language Models
+- LLM
 - Model as a Service
 - Inference
 - ComfyUI
@@ -78,6 +78,10 @@ apis:
   humanURL: https://cloud.infini-ai.com/gen-studio/api/reference/maas.html
   baseURL: https://cloud.infini-ai.com/maas/v1
   tags:
+  - LLM
+  - Inference
+  - OpenAI-Compatible
+  tags_raw:
   - Large Language Models
   - Inference
   - OpenAI-Compatible
