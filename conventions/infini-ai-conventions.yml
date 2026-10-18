@@ -12,7 +12,7 @@ openai_compatible: true
 authentication:
   style: bearer-token
   header: 'Authorization: Bearer <API_KEY>'
-  ref: authentication/docs-authentication.yml
+  ref: authentication/infini-ai-authentication.yml
 versioning:
   scheme: uri-path
   current: v1
@@ -29,11 +29,11 @@ idempotency:
   notes: No idempotency-key header is documented for the MaaS endpoints.
 error_envelope:
   shape: '{"code": <int>, "msg": <string>}'
-  ref: errors/docs-problem-types.yml
+  ref: errors/infini-ai-problem-types.yml
 rate_limiting:
   documented: true
   docs: https://cloud.infini-ai.com/gen-studio/api/usage-and-billing/rate-limit.html
 cross_links:
-  authentication: authentication/docs-authentication.yml
-  errors: errors/docs-problem-types.yml
-  lifecycle: lifecycle/docs-lifecycle.yml
+  authentication: authentication/infini-ai-authentication.yml
+  errors: errors/infini-ai-problem-types.yml
+  lifecycle: lifecycle/infini-ai-lifecycle.yml

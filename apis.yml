@@ -1,4 +1,4 @@
-aid: docs
+aid: infini-ai
 name: Infini-AI (无问芯穹)
 description: >-
   Infini-AI (无问芯穹 / Infinigence AI) is a Chinese AGI compute and model-service
@@ -97,7 +97,7 @@ apis:
   - type: GettingStarted
     url: https://cloud.infini-ai.com/gen-studio/api/get-started/overview.html
   - type: Authentication
-    url: authentication/docs-authentication.yml
+    url: authentication/infini-ai-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -117,19 +117,19 @@ common:
 - type: SignUp
   url: https://cloud.infini-ai.com
 - type: Authentication
-  url: authentication/docs-authentication.yml
+  url: authentication/infini-ai-authentication.yml
 - type: ErrorCatalog
-  url: errors/docs-problem-types.yml
+  url: errors/infini-ai-problem-types.yml
 - type: Conventions
-  url: conventions/docs-conventions.yml
+  url: conventions/infini-ai-conventions.yml
 - type: Lifecycle
-  url: lifecycle/docs-lifecycle.yml
+  url: lifecycle/infini-ai-lifecycle.yml
 - type: Conformance
-  url: conformance/docs-conformance.yml
+  url: conformance/infini-ai-conformance.yml
 - type: LLMsTxt
-  url: llms/docs-llms.txt
+  url: llms/infini-ai-llms.txt
 - type: DomainSecurity
-  url: security/docs-domain-security.yml
+  url: security/infini-ai-domain-security.yml
 - type: Website
   url: https://docs.infini-ai.com
 x-enrichment:
